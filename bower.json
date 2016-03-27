@@ -1,0 +1,32 @@
+{
+  "name": "reservatucancha",
+  "version": "0.0.1",
+  "homepage": "https://bitbucket.org/EugenioValeiras/gol-ui#readme",
+  "authors": [
+    "Eugenio Valeiras <eugenio.valeiras@gmail.com>"
+  ],
+  "description": "Reserva tu cancha ya!",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "angular-translate": "~2.8.1",
+    "angular-local-storage": "~0.2.3",
+    "restangular": "~1.5.1",
+    "angular-mocks": "~1.4.8",
+    "angular-animate": "~1.5.1",
+    "angular-material": "~1.0.6",
+    "angular-messages":"~1.5.2",
+    "angular-aria":"~1.5.2"
+  },
+  "resolutions": {
+    "angular": ">=1.2.26 <=1.5"
+  }
+}

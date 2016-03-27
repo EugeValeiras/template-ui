@@ -1,0 +1,46 @@
+<md-content layout="column" layout-padding layout-align="start center">
+        
+    <form layout="column" ng-submit="ctrl.createUser()" name="createForm" novalidate>
+
+        <md-input-container>
+            <label>*Nombre:</label>
+            <input ng-model="ctrl.user.name" name="name" required>
+            <ng-messages for="createForm.name.$error">
+                <ng-message when="required"> Este campo es requerrido. </ng-message>
+            </ng-messages>
+        </md-input-container>
+
+        <md-input-container>
+            <label>*Apellido:</label>
+            <input ng-model="ctrl.user.lastName" name="lastName" required>
+            <ng-messages for="createForm.lastName.$error">
+                <ng-message when="required"> Este campo es requerrido. </ng-message>
+            </ng-messages>
+        </md-input-container>
+
+        <md-input-container>
+            <label>*Email:</label>
+            <input ng-model="ctrl.user.email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+            <ng-messages for="createForm.email.$error" multiple>
+                <ng-message when="required"> Este campo es requerido. </ng-message>
+                <ng-message when="pattern"> No ingresaste un email. </ng-message>
+            </ng-messages>
+        </md-input-container>
+
+        <md-input-container>
+            <label>*Password:</label>
+            <input ng-model="ctrl.user.password" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            <ng-messages for="createForm.password.$error" multiple>
+                <ng-message when="required"> Este campo es requerrido. </ng-message>
+                <ng-message when="pattern"> Este campo debe contesner al menos un numero, una letra mayuscula, una minusculo y al menos 8 caracteres. </ng-message>
+            </ng-messages>
+        </md-input-container>
+
+        <md-input-container>
+            <label>Celular:</label>
+            <input ng-model="ctrl.user.cellphone">
+        </md-input-container>
+
+        <md-button type="submit" class="md-raised md-primary">Crear</md-button>
+    </form>
+</md-content>

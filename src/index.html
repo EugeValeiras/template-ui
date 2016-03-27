@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="App" lang="en">
+  <head>
+    
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+    <!--inject:css-->
+    <!--endinject-->
+  </head>
+  
+  <body layout="column" ng-cloak>
+
+    <md-toolbar layout="row">
+        
+        <div flex="60" flex-offset="10" layout="col">
+            <md-button flex="20" id="logo-container" class="brand-logo" ui-sref="homeBody">Logo Magico</md-button>
+        </div>
+        
+        <div flex flex-offset="5" layout="column">
+            <md-button layout-align="start center" flex flex-offset="30">Sos club?</md-button>
+        </div>
+        
+        <md-button flex="15" class="waves-effect waves-light btn orange" ui-sref="loginBody">Accedé</md-button>
+
+    </md-toolbar>
+
+    <div flex layout="column" ui-view="content"></div>
+    
+    <!--inject:js-->
+    <!--endinject-->
+
+</body>
+</html>
